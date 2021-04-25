@@ -20,7 +20,7 @@ function App() {
     }
   };
 
-  const handleClick = (e) => {
+  const onChange = (e) => {
     const { id, checked } = e.target;
     setIsCheck([...isCheck, id]);
     if (!checked) {
@@ -36,7 +36,7 @@ function App() {
           type="checkbox"
           name={name}
           id={id}
-          handleClick={handleClick}
+          onChange={onChange}
           isChecked={isCheck.includes(id)}
         />
         {name}
@@ -51,7 +51,7 @@ function App() {
           type="checkbox"
           name="selectAll"
           id="selectAll"
-          handleClick={handleSelectAll}
+          onChange={handleSelectAll}
           isChecked={isCheckAll}
         />
         Select All
